@@ -51,6 +51,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GRe-9R-iPS">
+                                <rect key="frame" x="55" y="233" width="341" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cEs-fu-aaZ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGT-g6-N7d">
+                                <rect key="frame" x="20" y="237" width="29" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="al4-bH-00b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -58,12 +73,17 @@
                             <constraint firstItem="5Gn-Cl-w6W" firstAttribute="top" secondItem="1p3-X9-vSd" secondAttribute="bottom" constant="29" id="1vM-Yb-7Wv"/>
                             <constraint firstItem="3JB-uR-dHA" firstAttribute="centerY" secondItem="5Gn-Cl-w6W" secondAttribute="centerY" id="8DB-WQ-bZ5"/>
                             <constraint firstItem="1p3-X9-vSd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Yb-SK-cJA"/>
+                            <constraint firstItem="GRe-9R-iPS" firstAttribute="leading" secondItem="zGT-g6-N7d" secondAttribute="trailing" constant="8" symbolic="YES" id="ASv-Lv-mAr"/>
+                            <constraint firstItem="zGT-g6-N7d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EgL-Ze-3er"/>
+                            <constraint firstItem="GRe-9R-iPS" firstAttribute="top" secondItem="Xp7-u9-azu" secondAttribute="bottom" constant="18" id="H2T-nT-s7A"/>
                             <constraint firstItem="3JB-uR-dHA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="JgP-hU-H4g"/>
                             <constraint firstItem="Xp7-u9-azu" firstAttribute="leading" secondItem="g2c-VN-jqZ" secondAttribute="trailing" constant="8" id="MUF-Dw-3bm"/>
                             <constraint firstItem="5Gn-Cl-w6W" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XvE-6S-fR9"/>
+                            <constraint firstItem="zGT-g6-N7d" firstAttribute="centerY" secondItem="GRe-9R-iPS" secondAttribute="centerY" id="YDP-ri-LX8"/>
                             <constraint firstItem="Xp7-u9-azu" firstAttribute="top" secondItem="5Gn-Cl-w6W" secondAttribute="bottom" constant="18" id="ZHL-YS-qhX"/>
                             <constraint firstItem="3JB-uR-dHA" firstAttribute="leading" secondItem="g2c-VN-jqZ" secondAttribute="leading" id="fhV-go-eIg"/>
                             <constraint firstItem="1p3-X9-vSd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="gDZ-Y4-obC"/>
+                            <constraint firstItem="GRe-9R-iPS" firstAttribute="trailing" secondItem="Xp7-u9-azu" secondAttribute="trailing" id="i91-dk-Arw"/>
                             <constraint firstItem="5Gn-Cl-w6W" firstAttribute="leading" secondItem="3JB-uR-dHA" secondAttribute="trailing" constant="8" id="kFY-sg-8Qv"/>
                             <constraint firstItem="g2c-VN-jqZ" firstAttribute="width" secondItem="3JB-uR-dHA" secondAttribute="width" id="l3K-sD-cYm"/>
                             <constraint firstItem="5Gn-Cl-w6W" firstAttribute="trailing" secondItem="Xp7-u9-azu" secondAttribute="trailing" id="l8D-je-uw0"/>
@@ -77,6 +97,7 @@
                     <connections>
                         <outlet property="nameField" destination="5Gn-Cl-w6W" id="1Vc-3I-Wx7"/>
                         <outlet property="numberField" destination="Xp7-u9-azu" id="VEG-wC-dGc"/>
+                        <outlet property="sliderLabel" destination="zGT-g6-N7d" id="vtU-Nd-UsJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
